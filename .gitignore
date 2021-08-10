@@ -29,3 +29,6 @@ npm-debug.log*
 /platforms
 /plugins
 /www
+*.json
+package-lock.json
+package.json
