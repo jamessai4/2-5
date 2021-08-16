@@ -41,8 +41,10 @@
   </ion-card>
 
   <ion-list>
-    <ion-item>
+
+    <ion-item *ngFor="let name of ['sompong','kittithach','Supakit','Sarayut']"  >
       <ion-grid>
+
         <ion-row>
           <!-- col show picture -->
           <ion-col>
@@ -52,7 +54,7 @@
           </ion-col>
           <!-- col show Details -->
           <ion-col>
-            <div class="distant">Manga Jujutsu</div>
+            <div class="distant">{{name}}</div>
             <div class="distant">500 ฿</div>
             <div class="distant">
               <ion-badge color="primary">M</ion-badge>
@@ -64,8 +66,11 @@
             </ion-button>
           </ion-col>
         </ion-row>
+
+        
       </ion-grid>
     </ion-item>
+
   </ion-list>
 
 </ion-content>

@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- <ion-list>
+    <ion-item>
+      <ion-text>Kittithach</ion-text>
+      <ion-buttons slot="end">
+        <ion-button color="danger">
+          <ion-icon name="trash-bin"></ion-icon>
+          delete
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list> -->
+
+  <ion-list>
+    <ion-item *ngFor="let name of names" >
+      <ion-text>{{name}}</ion-text>
+      <ion-buttons slot="end" (click)="remove(item)">
+        <ion-button color="danger">
+          <ion-icon name="trash-bin"></ion-icon>
+          delete
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-input placeholder="Add Contact Name" [(ngModel)]="contactname"></ion-input>
+    <ion-button (click)="addcontact()">
+      <ion-icon name="add"></ion-icon>Add
+    </ion-button>
+  </ion-item>
+
+</ion-content>
