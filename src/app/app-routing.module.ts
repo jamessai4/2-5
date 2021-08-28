@@ -27,10 +27,6 @@ const routes: Routes = [
     path: 'about',
     loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
   },
-  {
-    path: 'final-tase',
-    loadChildren: () => import('./final-tase/final-tase.module').then( m => m.FinalTasePageModule)
-  },
 ];
 
 @NgModule({
