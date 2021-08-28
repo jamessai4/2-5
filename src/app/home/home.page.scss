@@ -1,6 +1,5 @@
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -26,26 +25,22 @@
   text-decoration: none;
 }
 
-ion-row{
+ion-row {
   border-style: solid;
   border-width: 3px;
   border-radius: 15px;
   margin-bottom: 8px;
 }
 
-p{
-  font-family: "Mali";
-}
+// p {
+//   font-family: "Mali";
+// }
 
-ion-col{
-  font-family: 'Charmonman', cursive;
-}
+// ion-col {
+//   font-family: 'Charmonman', cursive;
+// }
 
 // ion-content{
 //   --ion-background-color:rgb(174,211,255);
 //   --ion-background-color:linear-gradient(106deg, rgba(174,211,255,1) 0%, rgba(185,255,195,1) 100%);
 // }
-
-
-
-

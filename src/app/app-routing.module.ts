@@ -19,6 +19,18 @@ const routes: Routes = [
     path: 'show-list',
     loadChildren: () => import('./show-list/show-list.module').then( m => m.ShowListPageModule)
   },
+  {
+    path: 'loginform',
+    loadChildren: () => import('./loginform/loginform.module').then( m => m.LoginformPageModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'final-tase',
+    loadChildren: () => import('./final-tase/final-tase.module').then( m => m.FinalTasePageModule)
+  },
 ];
 
 @NgModule({

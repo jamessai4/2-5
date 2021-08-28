@@ -1,0 +1,32 @@
+<ion-content>
+
+  <div id="container">
+    <ion-img src="https://pongsawadi.ac.th/psc2019/wp-content/uploads/2019/08/logo.png"></ion-img>
+
+    <div>
+      <ion-item lines="none" class="input"> 
+        <ion-icon name="person-sharp"></ion-icon>
+        <ion-input placeholder="Username" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none" class="input">
+        <ion-icon name="key"></ion-icon>
+        <ion-input placeholder="password" [type]="type ? 'password':'text'"></ion-input>
+        <ion-icon [name]="iconname" slot="end" (click)="functionshowpass()"></ion-icon>
+      </ion-item>
+    </div>
+
+    <div class="btn">
+      <ion-button expand="full" shape="round">Login</ion-button>
+    </div>
+
+    <div class="regis">
+      <p>Not a Member ? 
+        <ion-text color="primary">Register now :)</ion-text>
+      </p>
+    </div>
+
+  </div>
+
+
+</ion-content>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,19 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(
+    private navCtrl : NavController
+  ) {}
+
+  gotoAbout(){
+    this.navCtrl.navigateForward(['about']);
+
+    this.navCtrl.navigateForward(['about',{
+      name: 'James',
+      subject:'Ionic',
+      comname:'CuteCat',
+      fullname:'Kittithach Playkeaw',
+    }]);
+  }
 
 }

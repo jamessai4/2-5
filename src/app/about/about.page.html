@@ -1,0 +1,56 @@
+<ion-content>
+
+  <div class="header-bg"></div>
+  <div class="content">
+    <img src="https://i.ytimg.com/vi/BWXR9a3bE5Y/maxresdefault.jpg" alt="">
+    <ion-label>
+      <h1>Name</h1>
+      <p>{{fname1}}</p>
+    </ion-label>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <p>Name</p>
+        <h2>{{name1}}</h2>
+      </ion-col>
+      <ion-col>
+        <p>Name</p>
+        <h2>{{name1}}</h2>
+      </ion-col>
+      <ion-col>
+        <p>Name</p>
+        <h2>{{name1}}</h2>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="card1">
+          <ion-img src="assets/icon/favourite.png" style="width: 40%; margin-top: 20px;margin-left: 30%;"></ion-img>
+          <ion-card-header>
+            <h2>Education</h2>
+            {{subject1}}
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="card2">
+          <ion-img src="assets/icon/worldwide.png" style="width: 40%;margin-top: 20px; margin-left: 30%;"></ion-img>
+          <ion-card-header>
+            <h2>Company Name</h2>
+            {{comname1}}
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button expand="full" shape="round" (click)="goback()">Back</ion-button>
+
+</ion-content>
