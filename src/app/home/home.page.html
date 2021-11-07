@@ -48,7 +48,8 @@
   <div style="margin-bottom: 8px;" class="ion-margin">
     <ion-img src="https://cms.dmpcdn.com/travel/2017/08/03/73512677-71cf-4649-9b4d-ca4b47d2587e.jpg"></ion-img>
     <ion-text color="success">
-      <p>“ซากุระเมืองไทย” มักจะบานเต็มที่ในช่วงหลังปีใหม่ราวปลายเดือนมกราคม-ต้นกุมภาพันธ์ แต่ในหนาวนี้ซากุเมืองไทย ได้เริ่มทยอยออกดอกเบ่งบานกันตั้งแต่ช่วงกลาง-ปลายธันวาคม</p>
+      <p>“ซากุระเมืองไทย” มักจะบานเต็มที่ในช่วงหลังปีใหม่ราวปลายเดือนมกราคม-ต้นกุมภาพันธ์ แต่ในหนาวนี้ซากุเมืองไทย
+        ได้เริ่มทยอยออกดอกเบ่งบานกันตั้งแต่ช่วงกลาง-ปลายธันวาคม</p>
     </ion-text>
   </div>
   <ion-grid>
@@ -87,9 +88,50 @@
       <ion-button expand="full" shape="round" color="primary" routerLink="/show-list">List Page</ion-button>
     </div>
     <div>
-      <ion-button expand="full" shape="round" color="danger" (click)="gotoAbout()" >About</ion-button>
+      <ion-button expand="full" shape="round" color="danger" (click)="gotoAbout()">About</ion-button>
     </div>
 
   </ion-grid>
+
+  <ion-item>
+    {{users.fullname}}
+    {{users.username}}
+    {{users.addess}}
+  </ion-item>
+
+<ion-item>
+  {{users}}
+</ion-item>
+  
+<ion-item>
+   {{jsonString}}
+</ion-item>
+
+<ion-grid>
+  
+<img [src]="users.img_url" alt="">
+
+  <ion-row>
+    <ion-col>
+      ชื่อ : {{users.fullname}}
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      ชื่อผู้ใช้งาน : {{users.username}}
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      ที่อยู่ : {{users.addess}}
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div>
+  <ion-button expand="full" shape="round" color="dark" (click)="jsonobj()">Show json</ion-button>
+</div>
+ 
+
 
 </ion-content>

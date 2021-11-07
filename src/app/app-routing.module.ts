@@ -26,7 +26,11 @@ const routes: Routes = [
   {
     path: 'about',
     loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },  {
+    path: 'jsonobj',
+    loadChildren: () => import('./jsonobj/jsonobj.module').then( m => m.JsonobjPageModule)
   },
+
 ];
 
 @NgModule({
