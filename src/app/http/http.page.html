@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Covid 19</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card *ngFor="let item of data" >
+  <ion-item>
+  <div slot="start">ชื่อจังหวัด :</div>
+  <div>{{item.province}}</div>
+  </ion-item>
+  <!-- <ion-item>
+    <div slot="start">วันที่ :</div>
+    <div>{{item.txn_date}}</div>
+    </ion-item>
+    <ion-item>
+      <div slot="start">เวลาอัพเดตล่าสุด :</div>
+      <div>{{item.update_date}}</div>
+      </ion-item> -->
+</ion-card>
+
+
+  <!-- <ion-list *ngFor="let item of data" >
+    <ion-item>
+      ผู้ป่วยรายใหม่
+      {{item.new_case}}
+    </ion-item>
+    <ion-item>
+      ยอดผู้ป่วยสะสม
+      {{item.total_case}}
+    </ion-item>
+    <ion-item>
+      ยอดผู้เสียชีวิต
+      {{item.total_death}}
+    </ion-item>
+    <ion-item>
+      อัพเดตข้อมูลล่าสุด
+      {{item.update_date}}
+    </ion-item>
+    
+  </ion-list> -->
+
+  <ion-button (click)="callHttp()" color="dark">Covid 19</ion-button>
+</ion-content>

@@ -1,0 +1,12 @@
+ion-item{
+    --background:orange;
+    --color:red;
+}
+
+ion-content{
+    // --ion-background-color:pink;
+    
+  --ion-background-color:rgb(174,211,255);
+  --ion-background-color:linear-gradient(106deg, rgba(174,211,255,1) 0%, rgba(185,255,195,1) 100%);
+
+}

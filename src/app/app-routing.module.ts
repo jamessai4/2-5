@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'jsonobj',
     loadChildren: () => import('./jsonobj/jsonobj.module').then( m => m.JsonobjPageModule)
   },
+  {
+    path: 'http',
+    loadChildren: () => import('./http/http.module').then( m => m.HttpPageModule)
+  },
 
 ];
 
