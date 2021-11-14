@@ -6,20 +6,14 @@
 
 <ion-content>
 
-<ion-card *ngFor="let item of data" >
+<ion-card *ngFor="let item of x" >
   <ion-item>
   <div slot="start">ชื่อจังหวัด :</div>
   <div>{{item.province}}</div>
-  </ion-item>
-  <!-- <ion-item>
-    <div slot="start">วันที่ :</div>
-    <div>{{item.txn_date}}</div>
-    </ion-item>
-    <ion-item>
-      <div slot="start">เวลาอัพเดตล่าสุด :</div>
-      <div>{{item.update_date}}</div>
-      </ion-item> -->
+  </ion-item>  
 </ion-card>
+
+<ion-button (click)="callHttp()" color="dark">Covid 19</ion-button>
 
 
   <!-- <ion-list *ngFor="let item of data" >
@@ -42,5 +36,5 @@
     
   </ion-list> -->
 
-  <ion-button (click)="callHttp()" color="dark">Covid 19</ion-button>
+ 
 </ion-content>

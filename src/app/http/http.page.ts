@@ -13,12 +13,12 @@ export class HttpPage implements OnInit {
   ngOnInit() {
   } 
 
-  data : any;
+  x : any;
 
   callHttp() {
     this.http.get('https://covid19.ddc.moph.go.th/api/Cases/today-cases-by-provinces')
     .subscribe((data:any)=>{
-      this.data = data
+      this.x = data
     })
   } 
 
