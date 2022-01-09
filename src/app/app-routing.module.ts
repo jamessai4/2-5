@@ -34,6 +34,10 @@ const routes: Routes = [
     path: 'http',
     loadChildren: () => import('./http/http.module').then( m => m.HttpPageModule)
   },
+  {
+    path: 'add',
+    loadChildren: () => import('./add/add.module').then( m => m.AddPageModule)
+  },
 
 ];
 

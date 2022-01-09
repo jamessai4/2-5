@@ -6,71 +6,19 @@
     <ion-title style="text-align: center;">
       Product
     </ion-title>
-    <ion-buttons slot="end">
-      <ion-button>
-        <ion-icon name="cart"></ion-icon>
-      </ion-button>
-      <ion-badge>0</ion-badge>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item *ngFor="let item of items|async">
+    <ion-list>
+      <div>ชื่อ :{{item .name}}</div>
+      <div>รหัสประจำตัว :{{item .number_id}}</div>
+      <div>กิจกรรม :{{item .work}}</div>
+    </ion-list>
 
-  <ion-slides pager="true" [options]="{autoplay:true}">
-    <ion-slide>
-      <ion-img src="https://www.mcshop.com/mcshop/v1/media/Menu-Banner-s-toni.png?width=1280"></ion-img>
-    </ion-slide>
-    <ion-slide>
-      <ion-img src="https://www.mcshop.com/mcshop/v1/media/Menu-Banner-s-save-my-hips.png?width=1280"></ion-img>
-    </ion-slide>
-  </ion-slides>
+  </ion-item>
+  <ion-button expand="block" color="success" routerLink="/add">เพิ่มข้อมูล</ion-button>
 
-  <ion-card class="ion-margin">
-    <ion-img src="https://bodyglove.co.th/pub/media/wysiwyg/slider/2900x1200_4__1.jpg"></ion-img>
-    <ion-card-header>
-      <ion-card-title>
-        Body Glove
-      </ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis non excepturi quae unde et! Laboriosam
-        recusandae dolores quidem iusto dicta cum totam, voluptatibus quos aliquid eveniet accusamus illo tempora
-        beatae.</p>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-list>
-
-    <ion-item *ngFor="let name of ['sompong','kittithach','Supakit','Sarayut']"  >
-      <ion-grid>
-
-        <ion-row>
-          <!-- col show picture -->
-          <ion-col>
-            <ion-img
-              src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/440681/sub/goods_440681_sub13.jpg?width=1600&impolicy=quality_75">
-            </ion-img>
-          </ion-col>
-          <!-- col show Details -->
-          <ion-col>
-            <div class="distant">{{name}}</div>
-            <div class="distant">500 ฿</div>
-            <div class="distant">
-              <ion-badge color="primary">M</ion-badge>
-              <ion-badge color="success">L</ion-badge>
-              <ion-badge color="warning">XL</ion-badge>
-            </div>
-            <ion-button color="dark" expand="block" shape="round">Add to cart
-              <ion-icon name="cart"></ion-icon>
-            </ion-button>
-          </ion-col>
-        </ion-row>
-
-        
-      </ion-grid>
-    </ion-item>
-
-  </ion-list>
 
 </ion-content>

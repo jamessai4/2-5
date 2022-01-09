@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      ADD
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">name</ion-label>
+    <ion-input [(ngModel)]="db_name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">number id</ion-label>
+    <ion-input [(ngModel)]="db_numid"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">activity</ion-label>
+    <ion-input [(ngModel)]="db_work"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" color="success" (click)="add()">Add</ion-button>
+</ion-content>
