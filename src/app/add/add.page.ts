@@ -12,7 +12,10 @@ export class AddPage implements OnInit {
 
   worksCollection: AngularFirestoreCollection<any>;
 
-  constructor(private firestore: AngularFirestore) {
+  constructor(
+    private firestore: AngularFirestore,
+    private nav : NavController
+    ) {
     this.worksCollection = firestore.collection<any>('works')
   }
 
@@ -33,6 +36,8 @@ export class AddPage implements OnInit {
         this.db_name = ""
         this.db_numid = ""
         this.db_work = ""
+
+        this.nav.navigateRoot('product')
       })
   }
 

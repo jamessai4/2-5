@@ -10,14 +10,20 @@
 </ion-header>
 
 <ion-content>
-  <ion-item *ngFor="let item of items|async">
+
+  <ion-item *ngFor="let item of items|async" style="margin: 20px;">
     <ion-list>
+      <div>id :{{item.id}}</div>
       <div>ชื่อ :{{item .name}}</div>
       <div>รหัสประจำตัว :{{item .number_id}}</div>
       <div>กิจกรรม :{{item .work}}</div>
+      <ion-button color="danger" (click)="remove(item.id)">
+        delete
+      </ion-button>
+      <!-- <ion-button color="warning" [routerLink]=" '/edit/' + item.id">edit</ion-button> -->
     </ion-list>
-
   </ion-item>
+
   <ion-button expand="block" color="success" routerLink="/add">เพิ่มข้อมูล</ion-button>
 
 

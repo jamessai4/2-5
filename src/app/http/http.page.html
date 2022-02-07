@@ -2,11 +2,34 @@
   <ion-toolbar>
     <ion-title>Covid 19</ion-title>
   </ion-toolbar>
+  <ion-searchbar (ionChange)="search($event)" [(ngModel)]="SearchValue" animated></ion-searchbar>
 </ion-header>
+
 
 <ion-content>
 
-<ion-card *ngFor="let item of x" >
+  <div *ngFor="let item of x">
+    <ion-card *ngIf="!SearchValue">
+      <img
+        src="https://med.mahidol.ac.th/patient_care/sites/default/files/public/img/slide/COVID-19_Slide-inter-1920x1080.jpg" />
+      <ion-card-header>
+        <ion-card-subtitle>รายงานสถานการโควิด</ion-card-subtitle>
+        <ion-card-title>จังหวัด : {{item.province}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <div *ngFor="let item of tempvalue">
+    <ion-card *ngIf="SearchValue">
+      <img [src]="imgurl" />
+      <ion-card-header>
+        <ion-card-subtitle>รายงานสถานการโควิด</ion-card-subtitle>
+        <ion-card-title>จังหวัด : {{item.province}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <!-- <ion-card *ngFor="let item of x" >
   <ion-item>
   <div slot="start">ชื่อจังหวัด :</div>
   <div>{{item.province}}</div>
@@ -14,7 +37,7 @@
 </ion-card>
 
 <ion-button (click)="callHttp()" color="dark">Covid 19</ion-button>
-
+ -->
 
   <!-- <ion-list *ngFor="let item of data" >
     <ion-item>
@@ -36,5 +59,5 @@
     
   </ion-list> -->
 
- 
+
 </ion-content>
